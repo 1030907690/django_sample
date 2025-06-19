@@ -13,5 +13,8 @@ class User(models.Model):
     phone = models.CharField(max_length=16)
     create_time = models.DateTimeField(default=datetime.now)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         db_table = 't_user'  # 指定数据库表名
